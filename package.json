@@ -1,7 +1,7 @@
 {
-  "name": "@azure/rest-api-specs-scripts",
+  "name": "@jianye-org/rest-api-specs-scripts",
   "version": "0.9.0",
-  "description": "Scripts for the Azure RestAPI specification repository 'azure-rest-api-specs'.",
+  "description": "Scripts for the forked Azure RestAPI specification repository 'azure-rest-api-specs'.",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "files": [
@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Azure/rest-api-specs-scripts.git"
+    "url": "git+https://github.com/jianye/rest-api-specs-scripts.git"
   },
   "author": "Microsoft Corporation",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Azure/rest-api-specs-scripts/issues"
+    "url": "https://github.com/jianye/rest-api-specs-scripts/issues"
   },
-  "homepage": "https://github.com/Azure/rest-api-specs-scripts#readme",
+  "homepage": "https://github.com/jianye/rest-api-specs-scripts#readme",
   "devDependencies": {
     "@types/fs-extra": "^5.0.5",
     "@types/glob": "^7.1.1",
