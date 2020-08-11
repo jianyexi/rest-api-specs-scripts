@@ -29,7 +29,7 @@ export async function main() {
         let pipelineResultData: format.ResultMessageRecord = {
           type: "Result",
           level: "Error" as format.MessageLevel,
-          message: it.details?.message || "",
+          message: it.details!.message || "",
           code: it.code || "",
           docUrl: getDocUrl(it.code),
           time: new Date(),
@@ -42,22 +42,22 @@ export async function main() {
           },
           paths: []
         }
-        if (it.details?.url) pipelineResultData.paths.push(
+        if (it.details!.url && it.details!.position) pipelineResultData.paths.push(
           {
             tag: "Url",
             path: utils.blobHref(
               utils.getGithubStyleFilePath(
-                utils.getRelativeSwaggerPathToRepo(it.details?.url + '#L' + String(it.details?.position?.line) || "")
+                utils.getRelativeSwaggerPathToRepo(it.details!.url + '#L' + String(it.details!.position.line) || "")
               )
             )
           }
         );
-        if (it.details?.jsonUrl) pipelineResultData.paths.push(
+        if (it.details!.jsonUrl && it.details!.jsonPosition) pipelineResultData.paths.push(
           {
             tag: "JsonUrl",
             path: utils.blobHref(
               utils.getGithubStyleFilePath(
-                utils.getRelativeSwaggerPathToRepo(it.details?.jsonUrl + '#L' + String(it.details?.jsonPosition?.line) || "")
+                utils.getRelativeSwaggerPathToRepo(it.details!.jsonUrl + '#L' + String(it.details!.jsonPosition.line) || "")
               )
             )
           }
