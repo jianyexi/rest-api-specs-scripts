@@ -3,6 +3,7 @@
 
 export { runScript as breakingChange } from './breaking-change'
 export { runScript as momentOfTruth } from './momentOfTruth'
+export { main as modelValidationPipeline } from './modelValidationPipeline'
 
 import * as utils from './utils'
 import * as momentOfTruthUtils from './momentOfTruthUtils'
